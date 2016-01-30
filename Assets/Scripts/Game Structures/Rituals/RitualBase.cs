@@ -15,11 +15,18 @@ public abstract class RitualBase {
     public RitualHandler ritualTrigger;
 
     public virtual bool checkRequirements() {
-        foreach(var requirement in secondaryResourceRequirements) {
-            if (Village.secondaryResources[requirement.Key] < requirement.Value)
+        if (Village.Harvest < primaryResourceRequirements[0] || Village.Wealth < primaryResourceRequirements[1] ||
+            Village.Population < primaryResourceRequirements[2] || Village.Happiness < primaryResourceRequirements[3])
+        {
+            return false;
+        }
+        foreach (var requirement in secondaryResourceRequirements)
+        {
+            if (Village.secondaryResources[requirement.Key] > requirement.Value)
                 return false;
         }
         return true;
     }
+
     public abstract void ritualEffect();
 }

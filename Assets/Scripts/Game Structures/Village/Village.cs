@@ -12,10 +12,11 @@ public class Village : MonoBehaviour {
     public static int Wealth = 10;
     public static int Population = 5;
     public static int Happiness = 50;
+    public static Village VillageScript;
 
     public static Dictionary<SecondaryResource, int> secondaryResources = new Dictionary<SecondaryResource, int>();
 
-    public List<RitualBase> rituals = new List<RitualBase>();
+    public static List<RitualBase> rituals = new List<RitualBase>();
 
     private Text harvestText;
     private Text wealthText;
@@ -25,6 +26,7 @@ public class Village : MonoBehaviour {
 	void Start () {
         chiefHut = GameObject.Find("Chief's Hut");
         shrine = GameObject.Find("Shrine");
+        VillageScript = gameObject.GetComponent<Village>();
 
         harvestText = GameObject.Find("Harvest Text").GetComponent<Text>();
         wealthText = GameObject.Find("Wealth Text").GetComponent<Text>();
@@ -41,7 +43,7 @@ public class Village : MonoBehaviour {
 	
 	}
 
-    void updatePrimaryResources(int newHarvest, int newWealth,
+    public void updatePrimaryResources(int newHarvest, int newWealth,
                                 int newPopulation, int newHappiness) {
         Harvest = newHarvest;
         Wealth = newWealth;
