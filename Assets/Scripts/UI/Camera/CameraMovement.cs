@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class cameraMovement : MonoBehaviour {
+public class CameraMovement : MonoBehaviour {
 
     public float xSpeed = 120.0f;
     public float ySpeed = 120.0f;
