@@ -19,6 +19,8 @@ public class cameraMovement : MonoBehaviour {
         float xDistance = x * xSpeed * Time.deltaTime;
         float yDistance = y * ySpeed * Time.deltaTime;
 
-        transform.Translate(new Vector2(xDistance, yDistance));
+        Vector3 targetVector = Quaternion.Euler(0, 45, 0) * new Vector3(xDistance, 0, yDistance);
+
+        transform.Translate(targetVector);
 	}
 }
