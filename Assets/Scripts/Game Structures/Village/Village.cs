@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -16,10 +17,21 @@ public class Village : MonoBehaviour {
 
     public List<RitualBase> rituals = new List<RitualBase>();
 
+    private Text harvestText;
+    private Text wealthText;
+    private Text populationText;
+    private Text happinessText;
 	// Use this for initialization
 	void Start () {
         chiefHut = GameObject.Find("Chief's Hut");
         shrine = GameObject.Find("Shrine");
+
+        harvestText = GameObject.Find("Harvest Text").GetComponent<Text>();
+        wealthText = GameObject.Find("Wealth Text").GetComponent<Text>();
+        populationText = GameObject.Find("Population Text").GetComponent<Text>();
+        happinessText = GameObject.Find("Happiness Text").GetComponent<Text>();
+
+        updatePrimaryResourcesUI();
 
         rituals.Add(new RainDance());
 	}
@@ -28,4 +40,21 @@ public class Village : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    void updatePrimaryResources(int newHarvest, int newWealth,
+                                int newPopulation, int newHappiness) {
+        Harvest = newHarvest;
+        Wealth = newWealth;
+        Population = newPopulation;
+        Happiness = newHappiness;
+
+        updatePrimaryResourcesUI();
+    }
+
+    private void updatePrimaryResourcesUI() {
+        harvestText.text = Harvest.ToString();
+        wealthText.text = Wealth.ToString();
+        populationText.text = Population.ToString();
+        happinessText.text = Happiness.ToString();
+    }
 }
