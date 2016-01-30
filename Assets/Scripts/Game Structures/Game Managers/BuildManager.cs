@@ -3,6 +3,12 @@ using System.Collections;
 
 public class BuildManager : MonoBehaviour {
     public static GameObject primedBuilding = null;
+    private GameObject Village;
+
+    void Awake()
+    {
+        Village = GameObject.Find("Village");
+    }
 
     public static void buildFarm() {
         if (!Farm.checkResources()) {
@@ -10,7 +16,6 @@ public class BuildManager : MonoBehaviour {
         } else if(primedBuilding == null) {
             Farm.subtractResources();
             primedBuilding = Resources.Load("Farm", typeof(GameObject)) as GameObject;
-            Debug.Log(primedBuilding);
         }
     }
 
@@ -21,7 +26,8 @@ public class BuildManager : MonoBehaviour {
             Physics.Raycast(targetRay, out hitInfo);
             Debug.Log(hitInfo.collider);
             if (hitInfo.collider.tag == "Terrain") {
-                Instantiate(primedBuilding, hitInfo.point, Quaternion.identity);
+                GameObject tempGO = Instantiate(primedBuilding, hitInfo.point, Quaternion.identity) as GameObject;
+                tempGO.transform.parent = Village.transform;
                 primedBuilding = null;
             }
         } else if(primedBuilding != null && (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))) {

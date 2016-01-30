@@ -7,6 +7,7 @@ public class UIReferences : MonoBehaviour {
     public static GameObject buildMenu;
     public static Text descriptionText;
     public static GameObject ritualList;
+    public static GameObject secondaryResources;
     
 	// Use this for initialization
 	void Awake() {
@@ -16,5 +17,7 @@ public class UIReferences : MonoBehaviour {
         buildMenu = GameObject.Find("Build Menu");
         ritualList = GameObject.Find("Ritual List");
         ritualList.SetActive(false);
+        secondaryResources = GameObject.Find("Secondary Resources Panel");
+        secondaryResources.SetActive(false);
 	}
 }
