@@ -9,6 +9,7 @@ public class navmeshtest : MonoBehaviour
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
+		
     }
 
     // Update is called once per frame
