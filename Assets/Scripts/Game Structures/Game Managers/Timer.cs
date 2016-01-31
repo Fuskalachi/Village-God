@@ -11,17 +11,17 @@ public class Timer : MonoBehaviour {
     private static float currentCount = 0;
 
     private static Text daysText;
-    private static Image timePanel;
+    private static Image sunImage;
 	// Use this for initialization
 	void Start () {
         daysText = GameObject.Find("Days Text").GetComponent<Text>();
-        timePanel = GameObject.Find("Time Panel").GetComponent<Image>();
+        sunImage = GameObject.Find("Clock Sun").GetComponent<Image>();
         daysText.text = Days.ToString();
 	}
 
     void OnGUI()
     {
-        timePanel.fillAmount = (secondsPerDay - currentCount) / secondsPerDay;
+        sunImage.fillAmount = (secondsPerDay - currentCount) / secondsPerDay;
     }
 	
 	// Update is called once per frame
