@@ -1,0 +1,387 @@
+fileFormatVersion: 2
+guid: 508cf37cdc426494bb3ff8f4c064d388
+timeCreated: 1454269261
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: humanDance_Female_sheet_0
+    21300002: humanDance_Female_sheet_1
+    21300004: humanDance_Female_sheet_2
+    21300006: humanDance_Female_sheet_3
+    21300008: humanDance_Female_sheet_4
+    21300010: humanDance_Female_sheet_5
+    21300012: humanDance_Female_sheet_6
+    21300014: humanDance_Female_sheet_7
+    21300016: humanDance_Female_sheet_8
+    21300018: humanDance_Female_sheet_9
+    21300020: humanDance_Female_sheet_10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: humanDance_Female_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: -128}
+        - {x: 45, y: 45}
+        - {x: 30, y: 50}
+        - {x: 13, y: 76}
+        - {x: -74, y: 76}
+        - {x: -78, y: 69}
+        - {x: -80, y: 64}
+        - {x: -80, y: -86}
+        - {x: -50, y: -186}
+        - {x: -19, y: -186}
+        - {x: -17, y: -176}
+        - {x: -4, y: -186}
+        - {x: 20, y: -186}
+      - - {x: 84, y: 38}
+        - {x: 84, y: 29}
+        - {x: 89, y: 19}
+        - {x: 93, y: 19}
+        - {x: 93, y: 41}
+        - {x: 91, y: 41}
+      - - {x: 18, y: 177}
+        - {x: -28, y: 177}
+        - {x: -62, y: 159}
+        - {x: -62, y: 62}
+        - {x: 37, y: 62}
+        - {x: 45, y: 82}
+        - {x: 45, y: 140}
+        - {x: 44, y: 149}
+    - name: humanDance_Female_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 0
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -61.398438, y: 57}
+        - {x: -91.39844, y: 42}
+        - {x: -91.39844, y: -47}
+        - {x: -49.398438, y: -186}
+        - {x: 31.601562, y: -186}
+        - {x: 80.60156, y: -21}
+        - {x: 80.60156, y: 57}
+      - - {x: -46.398438, y: 174}
+        - {x: -57.398438, y: 145}
+        - {x: -57.398438, y: 65}
+        - {x: -45.398438, y: 59}
+        - {x: 23.601562, y: 59}
+        - {x: 48.601562, y: 68}
+        - {x: 48.601562, y: 134}
+        - {x: 25.601562, y: 174}
+    - name: humanDance_Female_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 0
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33.320312, y: -120}
+        - {x: 45.320312, y: -79}
+        - {x: 44.320312, y: -61}
+        - {x: 43.320312, y: -56}
+        - {x: 42.320312, y: -47}
+        - {x: 33.320312, y: -28}
+        - {x: 60.320312, y: 3}
+        - {x: 65.32031, y: 48}
+        - {x: 65.32031, y: 71}
+        - {x: 62.320312, y: 74}
+        - {x: -11.6796875, y: 74}
+        - {x: -88.67969, y: 51}
+        - {x: -88.67969, y: -110}
+        - {x: -57.679688, y: -186}
+        - {x: 7.3203125, y: -186}
+        - {x: 12.3203125, y: -176}
+        - {x: 20.320312, y: -156}
+      - - {x: 15.3203125, y: 174}
+        - {x: -56.679688, y: 174}
+        - {x: -81.67969, y: 157}
+        - {x: -81.67969, y: 72}
+        - {x: -73.67969, y: 59}
+        - {x: -1.6796875, y: 59}
+        - {x: 25.320312, y: 80}
+        - {x: 25.320312, y: 141}
+    - name: humanDance_Female_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 76}
+        - {x: -76, y: 63}
+        - {x: -76, y: -186}
+        - {x: 15, y: -186}
+        - {x: 49, y: -107}
+        - {x: 49, y: 76}
+      - - {x: 90, y: 50}
+        - {x: 88, y: 47}
+        - {x: 88, y: 39}
+        - {x: 91, y: 32}
+        - {x: 93, y: 32}
+        - {x: 93, y: 50}
+      - - {x: 8, y: 174}
+        - {x: -55, y: 174}
+        - {x: -72, y: 131}
+        - {x: -72, y: 74}
+        - {x: -61, y: 59}
+        - {x: 26, y: 59}
+        - {x: 35, y: 73}
+        - {x: 35, y: 134}
+        - {x: 30, y: 158}
+    - name: humanDance_Female_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 0
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 84.05469, y: -15}
+        - {x: 84.05469, y: 74}
+        - {x: 61.054688, y: 170}
+        - {x: -30.945312, y: 170}
+        - {x: -51.945312, y: 164}
+        - {x: -87.94531, y: 100}
+        - {x: -87.94531, y: -14}
+        - {x: -35.945312, y: -186}
+        - {x: -2.9453125, y: -186}
+        - {x: -3.9453125, y: -172}
+        - {x: 13.0546875, y: -186}
+        - {x: 40.054688, y: -186}
+    - name: humanDance_Female_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 0
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32.679688, y: 167}
+        - {x: -44.679688, y: 128}
+        - {x: -44.679688, y: 85}
+        - {x: -26.679688, y: 62}
+        - {x: -19.679688, y: 60}
+        - {x: -10.6796875, y: 56}
+        - {x: -14.6796875, y: 58}
+        - {x: -16.679688, y: 58}
+        - {x: -20.679688, y: 60}
+        - {x: -25.679688, y: 61}
+        - {x: -75.67969, y: 84}
+        - {x: -84.67969, y: 78}
+        - {x: -84.67969, y: -104}
+        - {x: -66.67969, y: -186}
+        - {x: 67.32031, y: -186}
+        - {x: 69.32031, y: -156}
+        - {x: 69.32031, y: 153}
+        - {x: 49.320312, y: 167}
+    - name: humanDance_Female_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 67, y: 46}
+        - {x: 68, y: 47}
+        - {x: 68, y: 127}
+        - {x: 53, y: 167}
+        - {x: -32, y: 167}
+        - {x: -86, y: 104}
+        - {x: -86, y: 26}
+        - {x: -81, y: 9}
+        - {x: -76, y: 1}
+        - {x: -71, y: -78}
+        - {x: -32, y: -186}
+        - {x: 41, y: -186}
+        - {x: 68, y: -42}
+        - {x: 68, y: 45}
+    - name: humanDance_Female_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 154}
+        - {x: -47, y: 103}
+        - {x: -32, y: 61}
+        - {x: -17, y: 51}
+        - {x: -11, y: 48}
+        - {x: -8, y: 46}
+        - {x: -6, y: 45}
+        - {x: -10, y: 47}
+        - {x: -13, y: 48}
+        - {x: -27, y: 57}
+        - {x: -88, y: -4}
+        - {x: -88, y: -24}
+        - {x: -85, y: -29}
+        - {x: -74, y: -26}
+        - {x: -59, y: -120}
+        - {x: -36, y: -186}
+        - {x: 42, y: -186}
+        - {x: 72, y: -55}
+        - {x: 72, y: 139}
+        - {x: 52, y: 154}
+      - - {x: 90, y: 72}
+        - {x: 92, y: 70}
+        - {x: 93, y: 70}
+        - {x: 93, y: 75}
+        - {x: 91, y: 75}
+    - name: humanDance_Female_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 0
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 93.875, y: 123}
+        - {x: 27.875, y: 123}
+        - {x: -84.125, y: 81}
+        - {x: -84.125, y: 21}
+        - {x: -1.125, y: -186}
+        - {x: 23.875, y: -186}
+        - {x: 27.875, y: -180}
+        - {x: 93.875, y: -50}
+      - - {x: -33.125, y: 170}
+        - {x: -63.125, y: 159}
+        - {x: -63.125, y: 56}
+        - {x: 40.875, y: 56}
+        - {x: 43.875, y: 68}
+        - {x: 43.875, y: 137}
+        - {x: 26.875, y: 170}
+    - name: humanDance_Female_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2291
+        y: 0
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.054688, y: 172}
+        - {x: -32.945312, y: 172}
+        - {x: -66.94531, y: 146}
+        - {x: -66.94531, y: -41}
+        - {x: -58.945312, y: -106}
+        - {x: -13.9453125, y: -186}
+        - {x: 13.0546875, y: -186}
+        - {x: 14.0546875, y: -172}
+        - {x: 76.05469, y: 29}
+        - {x: 76.05469, y: 139}
+    - name: humanDance_Female_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 0
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.765625, y: 51}
+        - {x: -70.765625, y: -12}
+        - {x: -70.765625, y: -51}
+        - {x: -25.765625, y: -186}
+        - {x: 42.234375, y: -186}
+        - {x: 78.234375, y: -74}
+        - {x: 78.234375, y: -11}
+        - {x: 49.234375, y: 51}
+      - - {x: 0.234375, y: 164}
+        - {x: -30.765625, y: 129}
+        - {x: -30.765625, y: 62}
+        - {x: -0.765625, y: 50}
+        - {x: 67.234375, y: 50}
+        - {x: 76.234375, y: 60}
+        - {x: 76.234375, y: 128}
+        - {x: 58.234375, y: 164}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
