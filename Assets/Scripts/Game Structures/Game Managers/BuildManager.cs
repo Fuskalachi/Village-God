@@ -24,7 +24,6 @@ public class BuildManager : MonoBehaviour {
             RaycastHit hitInfo;
             Ray targetRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(targetRay, out hitInfo);
-            Debug.Log(hitInfo.collider);
             if (hitInfo.collider.tag == "Terrain") {
                 GameObject tempGO = Instantiate(primedBuilding, hitInfo.point, Quaternion.identity) as GameObject;
                 tempGO.transform.parent = Village.transform;

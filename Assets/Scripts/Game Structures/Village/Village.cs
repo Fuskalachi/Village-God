@@ -12,6 +12,8 @@ public class Village : MonoBehaviour {
     public static int Wealth = 10;
     public static int Population = 5;
     public static int Happiness = 50;
+    public static int Workers = 2;
+    public static float workersPerPopulation = 5;
     public static Village VillageScript;
 
     public static Dictionary<SecondaryResource, int> secondaryResources = new Dictionary<SecondaryResource, int>();
@@ -22,6 +24,9 @@ public class Village : MonoBehaviour {
     private Text wealthText;
     private Text populationText;
     private Text happinessText;
+    private Text idleText;
+    private Image happinessBar;
+
 	// Use this for initialization
 	void Start () {
         chiefHut = GameObject.Find("Chief's Hut");
@@ -32,6 +37,8 @@ public class Village : MonoBehaviour {
         wealthText = GameObject.Find("Wealth Text").GetComponent<Text>();
         populationText = GameObject.Find("Population Text").GetComponent<Text>();
         happinessText = GameObject.Find("Happiness Text").GetComponent<Text>();
+        happinessBar = GameObject.Find("Happiness").GetComponent<Image>();
+        idleText = GameObject.Find("Idle Text").GetComponent<Text>();
 
         updatePrimaryResourcesUI();
 
@@ -49,6 +56,7 @@ public class Village : MonoBehaviour {
         Wealth = newWealth;
         Population = newPopulation;
         Happiness = newHappiness;
+        Workers = (int) (Population / workersPerPopulation);
 
         updatePrimaryResourcesUI();
     }
@@ -58,5 +66,8 @@ public class Village : MonoBehaviour {
         wealthText.text = Wealth.ToString();
         populationText.text = Population.ToString();
         happinessText.text = Happiness.ToString();
+        idleText.text = Workers.ToString();
+
+        happinessBar.fillAmount = (float)Happiness / 100;
     }
 }
