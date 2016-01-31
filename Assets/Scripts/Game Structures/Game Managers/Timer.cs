@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 using System.Collections;
 
 public class Timer : MonoBehaviour {
+    public static event Action TriggerNewDay;
+
     public static int Days = 0;
     public static float secondsPerDay = 30;
     private static float currentCount = 0;
@@ -18,7 +21,6 @@ public class Timer : MonoBehaviour {
 
     void OnGUI()
     {
-        Debug.Log((secondsPerDay - currentCount) / secondsPerDay);
         timePanel.fillAmount = (secondsPerDay - currentCount) / secondsPerDay;
     }
 	
@@ -29,6 +31,7 @@ public class Timer : MonoBehaviour {
         {
             Days += 1;
             daysText.text = Days.ToString();
+            TriggerNewDay();
             currentCount -= secondsPerDay;
         }
 	}
