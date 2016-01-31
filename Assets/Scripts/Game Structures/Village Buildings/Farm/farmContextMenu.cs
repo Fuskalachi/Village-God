@@ -16,12 +16,13 @@ public class farmContextMenu : MonoBehaviour {
     private List<ContextMenuItem> contextMenuItems;     // list of items in menu
     public Crop? currentCrop = null;
     public GameObject spawnedToken;
+    public GameObject spawnedToken2;
     private bool isReadyToHarvest = false;
     private Dictionary<Crop, string> cropToToken = new Dictionary<Crop, string> { { Crop.Wheat, "wheatToken" },
                                                                                   { Crop.Tomato, "tomatoToken" },
                                                                                   { Crop.Bell_Pepper, "bellpeperToken" },
                                                                                   {Crop.Carrot, "carrotToken" } };
-     
+    public bool doubleOutput;
 
     void Awake() {
         Timer.TriggerNewDay += farmNewDay;
@@ -57,6 +58,15 @@ public class farmContextMenu : MonoBehaviour {
                                        Quaternion.Euler(0, 45, 0)) as GameObject;
             spawnedToken.GetComponent<wheatContextMenu>().parentFarm = this;
             currentCrop = null;
+            if(doubleOutput) {
+                spawnedToken2 = Instantiate(Resources.Load("wheatToken"),
+                           new Vector3(transform.position.x + 1,
+                                       transform.position.y + 3,
+                                       transform.position.z + 3),
+                           Quaternion.Euler(0, 45, 0)) as GameObject;
+                spawnedToken2.GetComponent<wheatContextMenu>().parentFarm = this;
+                doubleOutput = false;
+            }
         }
         Destroy(contextPanel.gameObject);
     }

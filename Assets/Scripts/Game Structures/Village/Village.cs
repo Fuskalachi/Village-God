@@ -10,7 +10,7 @@ public class Village : MonoBehaviour {
 
     public static int Harvest = 25;
     public static int Wealth = 10;
-    public static int Population = 5;
+    public static int Population = 10;
     public static int Happiness = 50;
     public static int Workers = 2;
     public static float workersPerPopulation = 5;
@@ -37,7 +37,7 @@ public class Village : MonoBehaviour {
         wealthText = GameObject.Find("Wealth Text").GetComponent<Text>();
         populationText = GameObject.Find("Population Text").GetComponent<Text>();
         happinessText = GameObject.Find("Happiness Text").GetComponent<Text>();
-        happinessBar = GameObject.Find("Happiness").GetComponent<Image>();
+        happinessBar = GameObject.Find("Happiness Image").GetComponent<Image>();
         idleText = GameObject.Find("Idle Text").GetComponent<Text>();
 
         updatePrimaryResourcesUI();

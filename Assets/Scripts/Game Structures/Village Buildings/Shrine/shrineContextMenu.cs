@@ -8,17 +8,22 @@ public class shrineContextMenu : MonoBehaviour {
     public Button sampleButton;
     public GameObject ritualList;
     public static MonoBehaviour currentOffering;
+    public static MonoBehaviour currentOffering2;
+    public static event Action TriggerRainDanceSummon;
     private List<ContextMenuItem> contextMenuItems;
     private Dictionary<string, Type> scriptToRitual = new Dictionary<string, Type>() { { "wheatContextMenu", typeof(RainDance) } };
 
     void Awake()
     {
-        scriptToRitual.Add("wheaties", typeof(RainDance));
         contextMenuItems = new List<ContextMenuItem>();
 
-        Action<Image> sacrifice = new Action<Image>(SacrificeAction);
+        Action<Image> sacrifice = new Action<Image>(OfferWheatAction);
+        Action<Image> raindance = new Action<Image>(RainDanceAction);
+        Action<Image> insult = new Action<Image>(InsultAction);
 
-        contextMenuItems.Add(new ContextMenuItem("Sacrifice Offering", sampleButton, sacrifice));
+        contextMenuItems.Add(new ContextMenuItem("Offer Wheat", sampleButton, sacrifice));
+        contextMenuItems.Add(new ContextMenuItem("Rain Dance", sampleButton, raindance));
+        contextMenuItems.Add(new ContextMenuItem("Insult", sampleButton, insult));
     }
 
     void OnMouseOver()
@@ -30,14 +35,23 @@ public class shrineContextMenu : MonoBehaviour {
         }
     }
 
-    public void SacrificeAction(Image contextPanel) {
-        Type ritualType = scriptToRitual[currentOffering.GetType().Name];
-        RitualBase ritual = Activator.CreateInstance(ritualType) as RitualBase;
-        if (ritual.checkRequirements()) {
-            EventManager.AddRitual(ritual);
+    public void OfferWheatAction(Image contextPanel) {
+        if (currentOffering != null && currentOffering.name == "wheatToken") {
+            var wheatRitual = new OfferWheat();
+            EventManager.AddRitual(wheatRitual);
             Destroy(currentOffering.gameObject);
-            currentOffering = null;
         }
         Destroy(contextPanel.gameObject);
+    }
+
+    public void RainDanceAction(Image contextPanel) {
+        RainDance raindance = new RainDance();
+        EventManager.AddRitual(raindance);
+    }
+
+    public void InsultAction(Image contextPanel) {
+        Insult insult = new Insult();
+        EventManager.AddRitual(insult);
+        insult.triggerLightning();
     }
 }

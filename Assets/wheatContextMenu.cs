@@ -9,6 +9,7 @@ public class wheatContextMenu : MonoBehaviour {
     private GameObject Shrine;
     public farmContextMenu parentFarm;
     private List<ContextMenuItem> contextMenuItems;
+    public bool doubleHarvest = false;
 
     void Awake()
     {
@@ -43,7 +44,14 @@ public class wheatContextMenu : MonoBehaviour {
 
     private void moveToStorage(Image contextPanel)
     {
-        throw new NotImplementedException();
+        int harvestValue = doubleHarvest ? 20 : 10;
+        int newHarvest = Village.Harvest + harvestValue;
+        Village.VillageScript.updatePrimaryResources(newHarvest,
+                                                     Village.Wealth,
+                                                     Village.Population,
+                                                     Village.Happiness);
+        Destroy(transform.gameObject);
+        Destroy(contextPanel.gameObject);
     }
 
 }
