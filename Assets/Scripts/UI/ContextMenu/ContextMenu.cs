@@ -53,7 +53,6 @@ public class ContextMenu : MonoBehaviour
     {
         Transform childMenu = transform.Find("Context Menu(Clone)");
         if (childMenu != null) {
-            Debug.Log("Duplicate Detected");
             Destroy(childMenu.gameObject);
         }
 

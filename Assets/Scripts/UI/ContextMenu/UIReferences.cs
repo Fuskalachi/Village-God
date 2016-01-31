@@ -8,16 +8,20 @@ public class UIReferences : MonoBehaviour {
     public static Text descriptionText;
     public static GameObject ritualList;
     public static GameObject secondaryResources;
-    
-	// Use this for initialization
-	void Awake() {
+    public static GameObject buildButton;
+
+    // Use this for initialization
+    void Awake() {
         descriptionWindow = GameObject.Find("Description Window");
         descriptionText = GameObject.Find("UI Description").GetComponent<Text>();
-        descriptionWindow.SetActive(false);
         buildMenu = GameObject.Find("Build Menu");
         ritualList = GameObject.Find("Ritual List");
-        ritualList.SetActive(false);
         secondaryResources = GameObject.Find("Secondary Resources Panel");
-        secondaryResources.SetActive(false);
+        buildButton = GameObject.Find("Build Button");
 	}
+    void Start () {
+        secondaryResources.SetActive(false);
+        ritualList.SetActive(false);
+        descriptionWindow.SetActive(false);
+    }
 }

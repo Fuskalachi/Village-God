@@ -12,6 +12,7 @@ public class farmListener : MonoBehaviour, IPointerClickHandler {
         } else if (eventData.button == PointerEventData.InputButton.Left) {
             BuildManager.buildFarm();
             UIReferences.buildMenu.SetActive(false);
+            UIReferences.buildButton.SetActive(true);
         }
     }
 }

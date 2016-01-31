@@ -10,27 +10,25 @@ public class EventManager : MonoBehaviour {
     void Start()
     {
         Timer.TriggerNewDay += newDayHandler;
-        var ritual1 = new RainDance();
-        ritual1.onCoolDown = true;
-        var ritual2 = new RainDance();
-        AddRitual(ritual1);
-        AddRitual(ritual2);
     }
 
     private void newDayHandler()
     {
-        if (eventsTracker[0].onCoolDown)
+        if (eventsTracker.Count != 0)
         {
-            eventsTracker.RemoveAt(0);
-        }
-        foreach(var ritual in eventsTracker)
-        {
-            if (!ritual.onCoolDown)
+            if (eventsTracker[0].onCoolDown)
             {
-                ritual.ritualEffect();
+                eventsTracker.RemoveAt(0);
             }
+            foreach (var ritual in eventsTracker)
+            {
+                if (!ritual.onCoolDown)
+                {
+                    ritual.ritualEffect();
+                }
+            }
+            EventHistory.updateUIList();
         }
-        EventHistory.updateUIList();
     }
 
     public static void AddRitual(RitualBase ritual)

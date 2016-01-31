@@ -2,13 +2,12 @@
 using System.Collections;
 
 public class KeyboardInput : MonoBehaviour {
-
     GameObject buildMenu;
     bool isBuildButtonDown;
-    void Start() {
+    
+    void Awake() {
         isBuildButtonDown = false;
         buildMenu = GameObject.Find("Build Menu");
-        buildMenu.SetActive(false);
     }
 
     void Update() {
